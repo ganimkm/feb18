@@ -1,0 +1,13 @@
+---
+
+- name: Copy rpm file to server
+  copy:
+     src: jre_linux.rpm
+     dest: /tmp/package.rpm
+  become : yes
+
+- name: Install package.
+  yum:
+     name: /tmp/jre_linux.rpm
+     state: present
+  become : yes
