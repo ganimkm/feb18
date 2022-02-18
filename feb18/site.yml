@@ -1,0 +1,6 @@
+---
+-hosts [linux_servers]
+ gather_facts: yes
+ roles:
+   - project1
+
